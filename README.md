@@ -1,5 +1,5 @@
 # bootTeeworlds
-This automatically starts Teeworlds server as non-root when the Ubuntu server is shutdown and restarted
+This automatically starts Teeworlds server as non-root when the Ubuntu server is shutdown and restarted using systemd
 
 
 The reason why I created this is because auto starting Teeworlds server instance in Ubuntu on boot as a non-root is horribly complicated.
