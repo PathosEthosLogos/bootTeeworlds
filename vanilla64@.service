@@ -1,0 +1,13 @@
+[Unit]
+Description=vanilla64 server with %i.cfg config file
+After=syslog.target network.target
+
+[Service]
+User=vanilla64
+WorkingDirectory=/opt/vanilla64
+ExecStart=/opt/vanilla64/teeworlds_srv64 -f %i.cfg
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
