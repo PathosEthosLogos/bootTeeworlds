@@ -1,0 +1,13 @@
+[Unit]
+Description=teeworlds-bomb server with %i.cfg config file
+After=syslog.target network.target
+
+[Service]
+User=teeworlds-bomb
+WorkingDirectory=/opt/teeworlds-bomb
+ExecStart=/opt/teeworlds-bomb/teeworlds_srv -f %i.cfg
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
