@@ -1,0 +1,13 @@
+[Unit]
+Description=twbot server with %i.cfg config file
+After=syslog.target network.target
+
+[Service]
+User=twbot
+WorkingDirectory=/opt/twbot
+ExecStart=/opt/twbot/teeworlds_srv_bots -f %i.cfg
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
