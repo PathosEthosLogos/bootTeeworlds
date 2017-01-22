@@ -1,0 +1,13 @@
+[Unit]
+Description=teesmash server with %i.cfg config file
+After=syslog.target network.target
+
+[Service]
+User=teesmash
+WorkingDirectory=/opt/teesmash
+ExecStart=/opt/teesmash/teeworlds_srv -f %i.cfg
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
