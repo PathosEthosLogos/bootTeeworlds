@@ -1,0 +1,13 @@
+[Unit]
+Description=teeworlds-tw-plus server with %i.cfg config file
+After=syslog.target network.target
+
+[Service]
+User=teeworlds-tw-plus
+WorkingDirectory=/opt/teeworlds-tw-plus
+ExecStart=/opt/teeworlds-tw-plus/tw+_srv -f %i.cfg
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
