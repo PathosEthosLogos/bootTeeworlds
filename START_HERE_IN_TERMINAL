@@ -6,6 +6,7 @@ cp ~/teeworlds-zCatch /opt/ -R
 cp ~/twbot /opt/ -R
 cp ~/teesmash /opt/ -R
 cp ~/vanilla64 /opt/ -R
+cp ~/teerace /opt/ -R
 
 
 # Adds non-root users for each of the mods
@@ -15,6 +16,7 @@ useradd -c 'teeworlds-zCatch' -d /opt/teeworlds-zCatch -M -r -s /usr/sbin/nologi
 useradd -c 'twbot' -d /opt/twbot -M -r -s /usr/sbin/nologin twbot
 useradd -c 'teesmash' -d /opt/teesmash -M -r -s /usr/sbin/nologin teesmash
 useradd -c 'vanilla64' -d /opt/vanill64 -M -r -s /usr/sbin/nologin vanilla64
+useradd -c 'teerace' -d /opt/teerace -M -r -s /usr/sbin/nologin teerace
 
 
 nano /etc/systemd/system/teeworlds-tw-plus@.service
@@ -35,6 +37,9 @@ nano /etc/systemd/system/teesmash@.service
 nano /etc/systemd/system/vanilla64@.service
 # COPY PASTE THE GIVEN FILE
 
+nano /etc/systemd/system/teerace@.service
+# COPY PASTE THE GIVEN FILE
+
 
 # Gives proper permissions to the users for the directories
 chown teeworlds-tw-plus:teeworlds-tw-plus -R /opt/teeworlds-tw-plus
@@ -43,6 +48,7 @@ chown teeworlds-zCatch:teeworlds-zCatch -R /opt/teeworlds-zCatch
 chown twbot:twbot -R /opt/twbot
 chown teesmash:teesmash -R /opt/teesmash
 chown vanilla64:vanilla64 -R /opt/vanilla64
+chown teerace:teerace -R /opt/teerace
 
 # Enables scheduled tasks, which means tasks that will start at every boot. If one mod needs multiple instances
 # (for example, TW+ has DM+, CTF+, iCTF+, gCTF+, TDM+, and I have four different config files on four server instances),
@@ -55,6 +61,7 @@ systemctl enable teeworlds-zCatch@zcatch
 systemctl enable twbot@twbot
 systemctl enable teesmash@teesmash
 systemctl enable vanilla64@ctf64
+systemctl enable teerace@teerace1 teerace@teerace2
 
 # If you want to start the server instances right away without restarting the machine, you can run these commmands.
 # Instead of "start", you can use "stop" to shutdown those instances.
@@ -64,3 +71,4 @@ systemctl start teeworlds-zCatch@zcatch
 systemctl start twbot@twbot
 systemctl start teesmash@teesmash
 systemctl start vanilla64@ctf64
+systemctl start teerace@teerace1 teerace@teerace2
