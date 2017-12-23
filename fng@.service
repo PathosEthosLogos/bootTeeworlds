@@ -1,0 +1,13 @@
+[Unit]
+Description=fng server with %i.cfg config file
+After=syslog.target network.target
+
+[Service]
+User=fng
+WorkingDirectory=/opt/fng
+ExecStart=/opt/fng/fng2_srv -f %i.cfg
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
