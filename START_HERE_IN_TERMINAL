@@ -19,6 +19,7 @@ useradd -c 'fng' -d /opt/fng -M -r -s /usr/sbin/nologin fng
 useradd -c 'teesmash' -d /opt/teesmash -M -r -s /usr/sbin/nologin teesmash
 useradd -c 'vanilla64' -d /opt/vanill64 -M -r -s /usr/sbin/nologin vanilla64
 useradd -c 'teerace' -d /opt/teerace -M -r -s /usr/sbin/nologin teerace
+useradd -c 'twvanilla' -d /opt/twvanilla -M -r -s /usr/sbin/nologin twvanilla
 
 
 nano /etc/systemd/system/teeworlds-tw-plus@.service
@@ -43,6 +44,9 @@ nano /etc/systemd/system/vanilla64@.service
 # COPY PASTE THE GIVEN FILE
 
 nano /etc/systemd/system/teerace@.service
+# COPY PASTE THE GIVEN FILE
+
+nano /etc/systemd/system/twvanilla@.service
 # COPY PASTE THE GIVEN FILE
 
 
