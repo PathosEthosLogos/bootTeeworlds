@@ -86,4 +86,4 @@ systemctl start fng@fng
 systemctl start teesmash@teesmash
 systemctl start vanilla64@ctf64
 systemctl start teerace@teerace1 teerace@teerace2
-systemctl start twvanilla@ctf twvanilla@ctf1 twvanilla@ictf twvanilla@gctf twvanilla@idm twvanilla@dm1 twvanilla@dm
+systemctl start twvanilla@ctf twvanilla@ctf1 twvanilla@dm1 twvanilla@dm
