@@ -1,0 +1,13 @@
+[Unit]
+Description=twvanilla server with %i.cfg config file
+After=syslog.target network.target
+
+[Service]
+User=twvanilla
+WorkingDirectory=/opt/twvanilla
+ExecStart=/opt/teeworlds-tw-plus/twvanilla -f %i.cfg
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
