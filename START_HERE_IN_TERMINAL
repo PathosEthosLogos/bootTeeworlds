@@ -59,13 +59,14 @@ chown fng:fng -R /opt/fng
 chown teesmash:teesmash -R /opt/teesmash
 chown vanilla64:vanilla64 -R /opt/vanilla64
 chown teerace:teerace -R /opt/teerace
+chown twvanilla:twvanilla -R /opt/twvanilla
 
 # Enables scheduled tasks, which means tasks that will start at every boot. If one mod needs multiple instances
 # (for example, TW+ has DM+, CTF+, iCTF+, gCTF+, TDM+, and I have four different config files on four server instances),
 # then just name those config files after the @ symbol. In the first line below, I have ctf.cfg, ctf1.cfg, ictf.cfg, and gctf.cfg.
 # You can stop here and restart the machine and it should work.
 # To disable the server instances from auto starting, replace "enable" with "disable"
-systemctl enable teeworlds-tw-plus@ctf teeworlds-tw-plus@ctf1 teeworlds-tw-plus@ictf teeworlds-tw-plus@gctf
+#systemctl enable teeworlds-tw-plus@ctf teeworlds-tw-plus@ctf1 teeworlds-tw-plus@ictf teeworlds-tw-plus@gctf
 systemctl enable teeworlds-bomb@bomb
 systemctl enable teeworlds-zCatch@zcatch
 systemctl enable twbot@twbot
@@ -73,10 +74,11 @@ systemctl enable fng@fng
 systemctl enable teesmash@teesmash
 systemctl enable vanilla64@ctf64
 systemctl enable teerace@teerace1 teerace@teerace2
+systemctl enable twvanilla@ctf twvanilla@ctf1 twvanilla@ictf twvanilla@gctf twvanilla@idm twvanilla@dm1 twvanilla@dm
 
 # If you want to start the server instances right away without restarting the machine, you can run these commmands.
 # Instead of "start", you can use "stop" to shutdown those instances.
-systemctl start teeworlds-tw-plus@ctf teeworlds-tw-plus@ctf1 teeworlds-tw-plus@ictf teeworlds-tw-plus@gctf
+#systemctl start teeworlds-tw-plus@ctf teeworlds-tw-plus@ctf1 teeworlds-tw-plus@ictf teeworlds-tw-plus@gctf
 systemctl start teeworlds-bomb@bomb
 systemctl start teeworlds-zCatch@zcatch
 systemctl start twbot@twbot
@@ -84,3 +86,4 @@ systemctl start fng@fng
 systemctl start teesmash@teesmash
 systemctl start vanilla64@ctf64
 systemctl start teerace@teerace1 teerace@teerace2
+systemctl start twvanilla@ctf twvanilla@ctf1 twvanilla@ictf twvanilla@gctf twvanilla@idm twvanilla@dm1 twvanilla@dm
