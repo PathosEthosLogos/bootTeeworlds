@@ -74,7 +74,7 @@ systemctl enable fng@fng
 systemctl enable teesmash@teesmash
 systemctl enable vanilla64@ctf64
 systemctl enable teerace@teerace1 teerace@teerace2
-systemctl enable twvanilla@ctf twvanilla@ctf1 twvanilla@ictf twvanilla@gctf twvanilla@idm twvanilla@dm1 twvanilla@dm
+systemctl enable twvanilla@ctf twvanilla@ctf1 twvanilla@dm1 twvanilla@dm
 
 # If you want to start the server instances right away without restarting the machine, you can run these commmands.
 # Instead of "start", you can use "stop" to shutdown those instances.
